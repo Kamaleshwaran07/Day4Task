@@ -238,43 +238,46 @@ console.log(ans)
 ```
 ## 8. Rotate an array by k times
 
+## Using Anonymous function
+
+```
+const rotateArray = function (arr, k) {
+  const n = arr.length;
+  k = k % n; 
+  const rotatedArray = arr.slice(k).concat(arr.slice(0, k));
+
+  return rotatedArray;
+};
 
 
+const originalArray = [1, 2, 3, 4, 5];
+const k = 3;
+
+const rotatedArray = rotateArray(originalArray, k);
+console.log("Original Array:", originalArray);
+console.log("Rotated Array:", rotatedArray);
+
+```
+
+## Using IIFE function
+
+```const rotateArray = (function (arr, k) {
+  const n = arr.length;
+  k = k % n; 
+  const rotatedArray = arr.slice(k).concat(arr.slice(0, k));
+
+  return rotatedArray;
+});
 
 
+const originalArray = [1, 2, 3, 4, 5];
+const k = 3;
 
+const rotatedArray = rotateArray(originalArray, k);
+console.log("Original Array:", originalArray);
+console.log("Rotated Array:", rotatedArray);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+```
 
 # 2nd Part of Task
 
